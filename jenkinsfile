@@ -5,17 +5,13 @@ pipeline {
 
         stage('Validate') {
             steps {
-                bat 
-                "C:\\Users\\DhawalTete\\AppData\\Local\\Programs\\Python\\Python313\\python.exe validate.py"
-                
+                bat 'C:\\Users\\DhawalTete\\AppData\\Local\\Programs\\Python\\Python313\\python.exe scripts\\validate.py'
             }
         }
 
         stage('Transform') {
             steps {
-                bat 
-                "C:\\Users\\DhawalTete\\AppData\\Local\\Programs\\Python\\Python313\\python.exe etl.py"
-                
+                bat 'C:\\Users\\DhawalTete\\AppData\\Local\\Programs\\Python\\Python313\\python.exe scripts\\transform.py'
             }
         }
     }
